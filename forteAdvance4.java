@@ -211,10 +211,29 @@ public class forteAdvance4 {
     }
 
     public static void main(String[] args) {
-        double []arr ={5,2,3,4};
+       
+        double []arr = new double[4];
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter num1:");
+        arr[0] =  sc.nextDouble();
+
+
+        System.out.println("Enter num2:");
+        arr[1] =  sc.nextDouble();
+
+        System.out.println("Enter num3:");
+        arr[2] =  sc.nextDouble();
+
+        System.out.println("Enter num4:");
+        arr[3] =  sc.nextDouble();
+
+        System.out.println("Enter required result");
+        double result = sc.nextDouble();
 
         List<ArrayList<Double>> resultList = new ArrayList<>();
         Permutation(0,arr,resultList);
+        
         for(ArrayList<Double> arrlist :resultList){
 
             if(!logic(0,  arrlist,0,13)){
